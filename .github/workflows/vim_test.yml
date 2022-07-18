@@ -7,7 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: git clone https://github.com/Finerestaurant/vim_setup
-      - run: cd vim_setup
-      - run: ./vim_setting.sh
+      - name: git clone
+        run: git clone https://github.com/Finerestaurant/vim_setup
+      - name: execute shell script
+        working-directory: ./vim_setup
+        run: ./vim_setting.sh
       
