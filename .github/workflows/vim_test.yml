@@ -8,5 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: git clone https://github.com/Finerestaurant/vim_setup
-      - run: ls -lah
+      - run: cd vim_setup
+      - run: ./vim_setting.sh
       
