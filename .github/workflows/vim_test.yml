@@ -3,7 +3,10 @@ name: vim_test
 on: [push]
 
 jobs:
-  test-ubuntu:
+  vim_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: git clone https://github.com/Finerestaurant/vim_setup
+      - run: ./vim_setting.sh
+      
